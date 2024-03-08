@@ -138,3 +138,11 @@ Below are some usage cases and examples that will cover any edge cases while usi
 [BaseModel] (6ca80215-4cc7-4e51-afc4-cfedb0eb7a82) {'id': '6ca80215-4cc7-4e51-afc4-cfedb0eb7a82', 'created_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48633), 'updated_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48676), 'name': 'ali'}
 (hbnb)
 ```
+
+```
+(hbnb) all
+["[BaseModel] (6ca80215-4cc7-4e51-afc4-cfedb0eb7a82) {'id': '6ca80215-4cc7-4e51-afc4-cfedb0eb7a82', 'created_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48633), 'updated_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48676), 'name': 'ali'}", "[BaseModel] (2ec04bb6-96e1-4529-8be1-f7d8be8f7714) {'id': '2ec04bb6-96e1-4529-8be1-f7d8be8f7714', 'created_at': datetime.datetime(2024, 3, 8, 20, 47, 40, 27181), 'updated_at': datetime.datetime(2024, 3, 8, 20, 47, 40, 27203)}"]
+(hbnb) BaseModel.update(6ca80215-4cc7-4e51-afc4-cfedb0eb7a82, {'name': 'ali', 'age': 50, 'rating': 8.2})
+(hbnb) show BaseModel 6ca80215-4cc7-4e51-afc4-cfedb0eb7a82
+[BaseModel] (6ca80215-4cc7-4e51-afc4-cfedb0eb7a82) {'id': '6ca80215-4cc7-4e51-afc4-cfedb0eb7a82', 'created_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48633), 'updated_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48676), 'name': 'ali', 'age': 50, 'rating': 8.2}
+```
