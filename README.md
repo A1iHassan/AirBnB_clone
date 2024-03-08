@@ -4,14 +4,20 @@
 ## Welcome to the AirBnB clone project!
 
 # DESCRIPTON
-This project
+This project is going to be the first out of three stages of us creating the full AirBnB clone, where we foucus in this project on the storage part where we can recieve data and store it properly in order for us to be able to access it whenever we want.
 
 # DESCRIPTION OF THE COMMAND INTERPRETER
-The command interpreter is the part of the project that allows you to interact with the storage entity directly, givving you access to the data stored in the data base with the ability to alter it freely.
+The command interpreter is the part of the project that allows you to interact with the storage entity directly, givving you access to the data stored in the data base with the ability to alter it freely. This project mainly and only uses Python an ddeals with JSON data.
 
 ## HOW TO START THE CONSOLE
 To start the console, run the command ```./console``` in your current working directory, where you originally cloned the repo.
 After that, you will see a prompt displayed on the left side of the screen ```(hbnb) ```, where then you can start using the console.
+
+> Note that this console was made assuming that all data will be enterd following some set rules:
+> 1. You can assume arguments are always in the right order
+> 2. all arguments are separated by a space
+> 3. A string argument with a space must be between double quote
+> 4. The error management starts from the first argument to the last one
 
 ## HOW TO USE THE CONSOLE
 There are plenty of commands that you can run through the console that can serve you with lots of functionalities and processes.
