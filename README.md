@@ -51,11 +51,18 @@ Below are some usage cases and examples that will cover any edge cases while usi
 (hbnb) all MyModel
 ** class doesn't exist **
 (hbnb) all BaseModel
-["[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}"]
+["[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': 
+'49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}"]
 (hbnb) all
-["[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}", "[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'id': '38f22813-2753-4d42-b37c-57a17f1e4f88', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'email': 'airbnb@mail.com', 'first_name': 'Betty', 'last_name': 'Bar', 'password': 'root'}"]
+["[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': 
+'49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}", "[User] 
+(38f22813-2753-4d42-b37c-57a17f1e4f88) {'id': '38f22813-2753-4d42-b37c-57a17f1e4f88', 'created_at': datetime.datetime(2017, 9, 28, 
+21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'email': 'airbnb@mail.com', 'first_name': 
+'Betty', 'last_name': 'Bar', 'password': 'root'}"]
 (hbnb) User.all()
-["[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'id': '38f22813-2753-4d42-b37c-57a17f1e4f88', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'email': 'airbnb@mail.com', 'first_name': 'Betty', 'last_name': 'Bar', 'password': 'root'}"]
+["[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'id': '38f22813-2753-4d42-b37c-57a17f1e4f88', 'created_at': datetime.datetime(2017, 
+9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'email': 'airbnb@mail.com', 
+'first_name': 'Betty', 'last_name': 'Bar', 'password': 'root'}"]
 ```
 
 #### show:
@@ -70,7 +77,8 @@ Below are some usage cases and examples that will cover any edge cases while usi
 (hbnb) show BaseModel 1234567890-abcd
 ** no instance found **
 (hbnb) show BaseModel 2858b4ca-9085-4b02-a48c-b326bdb5c192
-[BaseModel] (2858b4ca-9085-4b02-a48c-b326bdb5c192) {'id': '2858b4ca-9085-4b02-a48c-b326bdb5c192', 'created_at': datetime.datetime(2024, 3, 8, 20, 13, 8, 903587), 'updated_at': datetime.datetime(2024, 3, 8, 20, 13, 8, 903609)}
+[BaseModel] (2858b4ca-9085-4b02-a48c-b326bdb5c192) {'id': '2858b4ca-9085-4b02-a48c-b326bdb5c192', 'created_at': datetime.datetime
+(2024, 3, 8, 20, 13, 8, 903587), 'updated_at': datetime.datetime(2024, 3, 8, 20, 13, 8, 903609)}
 ```
 
 #### destroy:
@@ -94,7 +102,8 @@ Below are some usage cases and examples that will cover any edge cases while usi
 (hbnb) create User
 5f962e54-92af-4a88-9c64-4428a8f7e14e
 (hbnb) show User 5f962e54-92af-4a88-9c64-4428a8f7e14e
-[User] (5f962e54-92af-4a88-9c64-4428a8f7e14e) {'id': '5f962e54-92af-4a88-9c64-4428a8f7e14e', 'created_at': datetime.datetime(2024, 3, 8, 20, 27, 34, 63576), 'updated_at': datetime.datetime(2024, 3, 8, 20, 27, 34, 63601)}
+[User] (5f962e54-92af-4a88-9c64-4428a8f7e14e) {'id': '5f962e54-92af-4a88-9c64-4428a8f7e14e', 'created_at': datetime.datetime(2024, 3, 
+8, 20, 27, 34, 63576), 'updated_at': datetime.datetime(2024, 3, 8, 20, 27, 34, 63601)}
 (hbnb) destroy User 5f962e54-92af-4a88-9c64-4428a8f7e14e
 (hbnb) show User 5f962e54-92af-4a88-9c64-4428a8f7e14e
 ** no instance found **
@@ -132,17 +141,24 @@ Below are some usage cases and examples that will cover any edge cases while usi
 (hbnb) create BaseModel
 6ca80215-4cc7-4e51-afc4-cfedb0eb7a82
 (hbnb) show BaseModel 6ca80215-4cc7-4e51-afc4-cfedb0eb7a82
-[BaseModel] (6ca80215-4cc7-4e51-afc4-cfedb0eb7a82) {'id': '6ca80215-4cc7-4e51-afc4-cfedb0eb7a82', 'created_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48633), 'updated_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48676)}
+[BaseModel] (6ca80215-4cc7-4e51-afc4-cfedb0eb7a82) {'id': '6ca80215-4cc7-4e51-afc4-cfedb0eb7a82', 'created_at': datetime.datetime
+(2024, 3, 8, 20, 41, 2, 48633), 'updated_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48676)}
 (hbnb) update BaseModel 6ca80215-4cc7-4e51-afc4-cfedb0eb7a82 name ali
 (hbnb) show BaseModel 6ca80215-4cc7-4e51-afc4-cfedb0eb7a82
-[BaseModel] (6ca80215-4cc7-4e51-afc4-cfedb0eb7a82) {'id': '6ca80215-4cc7-4e51-afc4-cfedb0eb7a82', 'created_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48633), 'updated_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48676), 'name': 'ali'}
+[BaseModel] (6ca80215-4cc7-4e51-afc4-cfedb0eb7a82) {'id': '6ca80215-4cc7-4e51-afc4-cfedb0eb7a82', 'created_at': datetime.datetime
+(2024, 3, 8, 20, 41, 2, 48633), 'updated_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48676), 'name': 'ali'}
 (hbnb)
 ```
 
 ```
 (hbnb) all
-["[BaseModel] (6ca80215-4cc7-4e51-afc4-cfedb0eb7a82) {'id': '6ca80215-4cc7-4e51-afc4-cfedb0eb7a82', 'created_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48633), 'updated_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48676), 'name': 'ali'}", "[BaseModel] (2ec04bb6-96e1-4529-8be1-f7d8be8f7714) {'id': '2ec04bb6-96e1-4529-8be1-f7d8be8f7714', 'created_at': datetime.datetime(2024, 3, 8, 20, 47, 40, 27181), 'updated_at': datetime.datetime(2024, 3, 8, 20, 47, 40, 27203)}"]
+["[BaseModel] (6ca80215-4cc7-4e51-afc4-cfedb0eb7a82) {'id': '6ca80215-4cc7-4e51-afc4-cfedb0eb7a82', 'created_at': datetime.datetime
+(2024, 3, 8, 20, 41, 2, 48633), 'updated_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48676), 'name': 'ali'}", "[BaseModel] 
+(2ec04bb6-96e1-4529-8be1-f7d8be8f7714) {'id': '2ec04bb6-96e1-4529-8be1-f7d8be8f7714', 'created_at': datetime.datetime(2024, 3, 8, 20, 
+47, 40, 27181), 'updated_at': datetime.datetime(2024, 3, 8, 20, 47, 40, 27203)}"]
 (hbnb) BaseModel.update(6ca80215-4cc7-4e51-afc4-cfedb0eb7a82, {'name': 'ali', 'age': 50, 'rating': 8.2})
 (hbnb) show BaseModel 6ca80215-4cc7-4e51-afc4-cfedb0eb7a82
-[BaseModel] (6ca80215-4cc7-4e51-afc4-cfedb0eb7a82) {'id': '6ca80215-4cc7-4e51-afc4-cfedb0eb7a82', 'created_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48633), 'updated_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48676), 'name': 'ali', 'age': 50, 'rating': 8.2}
+[BaseModel] (6ca80215-4cc7-4e51-afc4-cfedb0eb7a82) {'id': '6ca80215-4cc7-4e51-afc4-cfedb0eb7a82', 'created_at': datetime.datetime
+(2024, 3, 8, 20, 41, 2, 48633), 'updated_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48676), 'name': 'ali', 'age': 50, 'rating': 8.
+2}
 ```
