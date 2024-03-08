@@ -30,3 +30,14 @@ The below table shows the available commands to be used:
 | ```<class_name>.update(<instance_id> <attr_name> <attr_value>)``` | same behavior as ```update <class_name> <instance_id> <attr_name> <attr_value>``` |
 | ```<class_name>.update(<instance_id> <dictionary representation>)``` | performs a ```.update()``` process on each key\value pair in the given dictionary |
 
+## EXAMPLES
+Below are some usage cases and examples that will cover any edge cases while using the above commands with or without the correct format and syntax
+
+#### all
+
+##### ```all```, ```all <class_name>```, and ```<class_name>.all()```
+
+```
+(hbnb) all MyModel
+** class doesn't exist **
+```
