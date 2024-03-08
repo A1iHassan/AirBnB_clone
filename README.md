@@ -6,12 +6,15 @@
 # DESCRIPTON
 This project is going to be the first out of three stages of us creating the full AirBnB clone, where we foucus in this project on the storage part where we can recieve data and store it properly in order for us to be able to access it whenever we want.
 
+
 # DESCRIPTION OF THE COMMAND INTERPRETER
 The command interpreter is the part of the project that allows you to interact with the storage entity directly, givving you access to the data stored in the data base with the ability to alter it freely. This project mainly and only uses Python an ddeals with JSON data.
+
 
 ## HOW TO START THE CONSOLE
 To start the console, run the command ```./console``` in your current working directory, where you originally cloned the repo.
 After that, you will see a prompt displayed on the left side of the screen ```(hbnb) ```, where then you can start using the console.
+
 
 > Note that this console was made assuming that all data will be enterd following some set rules:
 > 1. You can assume arguments are always in the right order
@@ -19,9 +22,11 @@ After that, you will see a prompt displayed on the left side of the screen ```(h
 > 3. A string argument with a space must be between double quote
 > 4. The error management starts from the first argument to the last one
 
+
 ## HOW TO USE THE CONSOLE
 There are plenty of commands that you can run through the console that can serve you with lots of functionalities and processes.
 The below table shows the available commands to be used:
+
 | **COMMAND** | **FUNCTIONALITY** |
 |-------------|-------------------|
 | ```create <class_name>``` | creates a new instance of the given class name, saves it to the JSON file, and prints out its id |
@@ -36,11 +41,12 @@ The below table shows the available commands to be used:
 | ```<class_name>.update(<instance_id> <attr_name> <attr_value>)``` | same behavior as ```update <class_name> <instance_id> <attr_name> <attr_value>``` |
 | ```<class_name>.update(<instance_id> <dictionary representation>)``` | performs a ```.update()``` process on each key\value pair in the given dictionary |
 
+
 ## EXAMPLES
 Below are some usage cases and examples that will cover any edge cases while using the above commands with or without the correct format and syntax.
 
 #### create
-##### (```create <class_name>```)
+(```create <class_name>```)
 ```
 (hbnb) create
 ** class name missing **
@@ -52,7 +58,7 @@ Below are some usage cases and examples that will cover any edge cases while usi
 ```
 
 #### all:
-##### (```all```, ```all <class_name>```, and ```<class_name>.all()```)
+(```all```, ```all <class_name>```, and ```<class_name>.all()```)
 ```
 (hbnb) all MyModel
 ** class doesn't exist **
@@ -72,7 +78,7 @@ Below are some usage cases and examples that will cover any edge cases while usi
 ```
 
 #### show:
-##### (```show <class_name> <instance_id>``` and ```<class_name>.show(<instance_id>)```)
+(```show <class_name> <instance_id>``` and ```<class_name>.show(<instance_id>)```)
 ```
 (hbnb) show
 ** class name missing **
@@ -88,7 +94,7 @@ Below are some usage cases and examples that will cover any edge cases while usi
 ```
 
 #### destroy:
-##### (```destroy <class_name> <instance_id>``` and ```<class_name>.destroy(<instance_id>)```)
+(```destroy <class_name> <instance_id>``` and ```<class_name>.destroy(<instance_id>)```)
 ```
 (hbnb) destroy
 ** class name missing **
@@ -119,11 +125,11 @@ Below are some usage cases and examples that will cover any edge cases while usi
 ```
 
 #### update:
-##### (
-##### ```update <class_name> <instance_id> <attr_name> <attr_value>```,
-##### ```<class_name>.update(<instance_id> <attr_name> <attr_value>)```,
-##### ```<class_name>.update(<instance_id> <dictionary representation>)```
-##### )
+(
+ ```update <class_name> <instance_id> <attr_name> <attr_value>```,
+ ```<class_name>.update(<instance_id> <attr_name> <attr_value>)```,
+ ```<class_name>.update(<instance_id> <dictionary representation>)```
+ )
 ```
 (hbnb) update
 ** class name missing **
