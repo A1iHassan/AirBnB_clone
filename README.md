@@ -1,5 +1,5 @@
 # 0x00. AirBnB clone - The console
-![AirBnB logo pic](https://images.app.goo.gl/yXFvbaaSmGX7nxZNA)
+![AirBnB logo pic](hbnb.png)
 
 ## Welcome to the AirBnB clone project!
 
