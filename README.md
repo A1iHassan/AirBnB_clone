@@ -174,3 +174,11 @@ Below are some usage cases and examples that will cover any edge cases while usi
 (2024, 3, 8, 20, 41, 2, 48633), 'updated_at': datetime.datetime(2024, 3, 8, 20, 41, 2, 48676), 'name': 'ali', 'age': 50, 'rating': 8.
 2}
 ```
+
+
+## Testing
+About the test files in this project, these are *Python unittest modules* that tend to test the console's functionalities.
+To run these tests you can do the following:
+
+1. All tests can be executed by using this command: `python3 -m unittest discover tests`
+2. You can also test file by file by using this command: `python3 -m unittest tests/test_models/test_base_model.py`
