@@ -26,6 +26,7 @@ def isfloat(x):
     except ValueError:
         return False
 
+
 def isint(x):
     """
     checks if a string represents an int
@@ -46,7 +47,8 @@ class HBNBCommand(cmd.Cmd):
     a custom class that inherits from the cmd class
     """
 
-    classes = ["BaseModel", "User", "City", "State", "Place", "Review", "Amenity"]
+    classes = ["BaseModel", "User", "City",
+               "State", "Place", "Review", "Amenity"]
     prompt = "(hbnb) "
 
     def do_quit(self, arg):
@@ -117,7 +119,9 @@ class HBNBCommand(cmd.Cmd):
                             x = f"{arg1} {_id} {key} {value}"
                             self.do_update(x)
                     except ValueError:
-                        x = f"{arg1} " + ''.join([i for i in text if i != ',' and i != '"' and i != "'"])
+                        x = f"{arg1} " + ''.join([i for i in text
+                                                  if i != ','
+                                                  and i != '"' and i != "'"])
                         self.do_update(x)
 
     def do_create(self, arg):

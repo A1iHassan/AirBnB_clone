@@ -56,6 +56,7 @@ class FileStorage:
 
         with open(self.__file_path, 'w', encoding="utf-8") as f:
             dump(self.__objects, f, indent=4)
+            f.write("\n")
 
     def reload(self):
         """ deserializes the JSON file to the storage

@@ -1,17 +1,9 @@
 {
-    "BaseModel.6ca80215-4cc7-4e51-afc4-cfedb0eb7a82": {
-        "id": "6ca80215-4cc7-4e51-afc4-cfedb0eb7a82",
-        "created_at": "2024-03-08T20:41:02.048633",
-        "updated_at": "2024-03-08T20:41:02.048676",
-        "__class__": "BaseModel",
-        "name": "ali",
-        "age": 50,
-        "rating": 8.2
-    },
-    "BaseModel.2ec04bb6-96e1-4529-8be1-f7d8be8f7714": {
-        "id": "2ec04bb6-96e1-4529-8be1-f7d8be8f7714",
-        "created_at": "2024-03-08T20:47:40.027181",
-        "updated_at": "2024-03-08T20:47:40.027203",
-        "__class__": "BaseModel"
+    "City.0bee5b9f-0488-4e6c-ba03-28533e68a354": {
+        "id": "0bee5b9f-0488-4e6c-ba03-28533e68a354",
+        "created_at": "2024-03-08T23:34:35.714334",
+        "updated_at": "2024-03-08T23:34:35.714354",
+        "__class__": "City",
+        "a": "c"
     }
 }
