@@ -3,7 +3,6 @@
 a module for the User class
 """
 from models.base_model import BaseModel
-from datetime import datetime as dt
 
 
 class User(BaseModel):
@@ -21,6 +20,3 @@ class User(BaseModel):
     password = ""
     first_name = ""
     last_name = ""
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
