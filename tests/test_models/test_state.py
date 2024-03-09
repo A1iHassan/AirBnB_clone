@@ -41,6 +41,14 @@ class Test_State(unittest.TestCase):
         """
         self.assertEqual(dt, type(State().updated_at))
 
+    def test_name_exists(self):
+        """
+        tests if the attribute self.name exists
+        """
+        x = State()
+        self.assertTrue(hasattr(x, "name"))
+        self.assertEqual(str, type(x.name))
+
     def test_constructor_with_kwargs(self):
         """
         tests the constructor with a dictionary of

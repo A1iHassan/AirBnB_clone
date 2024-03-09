@@ -41,6 +41,14 @@ class Test_Amenity(unittest.TestCase):
         """
         self.assertEqual(dt, type(Amenity().updated_at))
 
+    def test_name_exists(self):
+        """
+        tests if the self.name exists
+        """
+        x = Amenity()
+        self.assertTrue(hasattr(x, "name"))
+        self.assertEqual(str, type(x.name))
+
     def test_constructor_with_kwargs(self):
         """
         tests the constructor with a dictionary of

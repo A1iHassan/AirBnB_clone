@@ -41,6 +41,30 @@ class Test_Review(unittest.TestCase):
         """
         self.assertEqual(dt, type(Review().updated_at))
 
+    def test_place_id_exists(self):
+        """
+        tests if the self.place_id exists
+        """
+        x = Review()
+        self.assertTrue(hasattr(x, "place_id"))
+        self.assertEqual(str, type(x.place_id))
+
+    def test_user_id_exists(self):
+        """
+        tests if the self.user_id exists
+        """
+        x = Review()
+        self.assertTrue(hasattr(x, "user_id"))
+        self.assertEqual(str, type(x.user_id))
+
+    def test_text_exists(self):
+        """
+        tests if the self.text exists
+        """
+        x = Review()
+        self.assertTrue(hasattr(x, "text"))
+        self.assertEqual(str, type(x.text))
+
     def test_constructor_with_kwargs(self):
         """
         tests the constructor with a dictionary of

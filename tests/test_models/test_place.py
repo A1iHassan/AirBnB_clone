@@ -41,6 +41,94 @@ class Test_Place(unittest.TestCase):
         """
         self.assertEqual(dt, type(Place().updated_at))
 
+    def test_city_id_exists(self):
+        """
+        tests if the self.city_id exists
+        """
+        x = Place()
+        self.assertTrue(hasattr(x, "city_id"))
+        self.assertEqual(str, type(x.city_id))
+
+    def test_user_id_exists(self):
+        """
+        tests if the self.user_id exists
+        """
+        x = Place()
+        self.assertTrue(hasattr(x, "user_id"))
+        self.assertEqual(str, type(x.user_id))
+
+    def test_name_exists(self):
+        """
+        tests if the self.name exists
+        """
+        x = Place()
+        self.assertTrue(hasattr(x, "name"))
+        self.assertEqual(str, type(x.name))
+
+    def test_description_exists(self):
+        """
+        tests if the self.description exists
+        """
+        x = Place()
+        self.assertTrue(hasattr(x, "description"))
+        self.assertEqual(str, type(x.description))
+
+    def test_number_rooms_exists(self):
+        """
+        tests if the self.number_rooms exists
+        """
+        x = Place()
+        self.assertTrue(hasattr(x, "number_rooms"))
+        self.assertEqual(int, type(x.number_rooms))
+
+    def test_number_bathrooms_exists(self):
+        """
+        tests if the self.number_bathrooms exists
+        """
+        x = Place()
+        self.assertTrue(hasattr(x, "number_bathrooms"))
+        self.assertEqual(int, type(x.number_bathrooms))
+
+    def test_max_guest_exists(self):
+        """
+        tests if the self.max_guest exists
+        """
+        x = Place()
+        self.assertTrue(hasattr(x, "max_guest"))
+        self.assertEqual(int, type(x.max_guest))
+
+    def test_price_by_night_exists(self):
+        """
+        tests if the self.price_by_night exists
+        """
+        x = Place()
+        self.assertTrue(hasattr(x, "price_by_night"))
+        self.assertEqual(int, type(x.price_by_night))
+
+    def test_latitude_exists(self):
+        """
+        tests if the self.latitude exists
+        """
+        x = Place()
+        self.assertTrue(hasattr(x, "latitude"))
+        self.assertEqual(float, type(x.latitude))
+
+    def test_longitude_exists(self):
+        """
+        tests if the self.longitude exists
+        """
+        x = Place()
+        self.assertTrue(hasattr(x, "longitude"))
+        self.assertEqual(float, type(x.longitude))
+
+    def test_amenity_ids_exists(self):
+        """
+        tests if the self.amenity_ids exists
+        """
+        x = Place()
+        self.assertTrue(hasattr(x, "amenity_ids"))
+        self.assertEqual(list, type(x.amenity_ids))
+
     def test_constructor_with_kwargs(self):
         """
         tests the constructor with a dictionary of
