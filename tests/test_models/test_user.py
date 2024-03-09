@@ -47,6 +47,7 @@ class Test_User(unittest.TestCase):
         """
         x = User()
         self.assertTrue(hasattr(x, "email"))
+        self.assertEqual(str, type(x.email))
 
     def test_password_exist(self):
         """
@@ -54,6 +55,7 @@ class Test_User(unittest.TestCase):
         """
         x = User()
         self.assertTrue(hasattr(x, "password"))
+        self.assertEqual(str, type(x.password))
 
     def test_first_name_exist(self):
         """
@@ -61,6 +63,7 @@ class Test_User(unittest.TestCase):
         """
         x = User()
         self.assertTrue(hasattr(x, "first_name"))
+        self.assertEqual(str, type(x.first_name))
 
     def test_last_name_exist(self):
         """
@@ -68,6 +71,7 @@ class Test_User(unittest.TestCase):
         """
         x = User()
         self.assertTrue(hasattr(x, "last_name"))
+        self.assertEqual(str, type(x.last_name))
 
     def test_constructor_with_kwargs(self):
         """
