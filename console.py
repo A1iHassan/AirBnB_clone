@@ -91,38 +91,43 @@ class HBNBCommand(cmd.Cmd):
                 self.do_destroy(text)
             elif "update" in arg2:
                 text = arg2[arg2.index('(') + 1:arg2.index(')')]
-                _id, _ = text.split(", ", 1)
-                if not _id:
+                if text == "":
                     print("** instance id missing **")
+                elif not "," in text:
+                    print("** attribute name missing **")
                 else:
-                    try:
-                        _dict = arg2[arg2.index('{') + 1:arg2.index('}')]
-                        pairs = _dict.split(", ")
-                        _dict = dict()
-                        for i in pairs:
-                            key, value = i.split(":")
-                            if '"' in key:
-                                key = key.split('"')[1]
-                            elif "'" in key:
-                                key = key.split("'")[1]
-                            if '"' in value:
-                                value = value.split('"')[1]
-                            elif "'" in value:
-                                value = value.split("'")[1]
-                            else:
-                                if isint(value):
-                                    value = int(value)
-                                elif isfloat(value):
-                                    value = float(value)
-                            _dict[key] = value
-                        for key, value in _dict.items():
-                            x = f"{arg1} {_id} {key} {value}"
+                    _id, _ = text.split(", ", 1)
+                    if not _id:
+                        print("** instance id missing **")
+                    else:
+                        try:
+                            _dict = arg2[arg2.index('{') + 1:arg2.index('}')]
+                            pairs = _dict.split(", ")
+                            _dict = dict()
+                            for i in pairs:
+                                key, value = i.split(":")
+                                if '"' in key:
+                                    key = key.split('"')[1]
+                                elif "'" in key:
+                                    key = key.split("'")[1]
+                                if '"' in value:
+                                    value = value.split('"')[1]
+                                elif "'" in value:
+                                    value = value.split("'")[1]
+                                else:
+                                    if isint(value):
+                                        value = int(value)
+                                    elif isfloat(value):
+                                        value = float(value)
+                                _dict[key] = value
+                            for key, value in _dict.items():
+                                x = f"{arg1} {_id} {key} {value}"
+                                self.do_update(x)
+                        except ValueError:
+                            x = f"{arg1} " + ''.join([i for i in text
+                                                    if i != ','
+                                                    and i != '"' and i != "'"])
                             self.do_update(x)
-                    except ValueError:
-                        x = f"{arg1} " + ''.join([i for i in text
-                                                  if i != ','
-                                                  and i != '"' and i != "'"])
-                        self.do_update(x)
 
     def do_create(self, arg):
         """Creates a new instance of the given class object ,
