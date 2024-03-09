@@ -41,6 +41,13 @@ class Test_User(unittest.TestCase):
         """
         self.assertEqual(dt, type(User().updated_at))
 
+    def test_email_exist(self):
+        """
+        tests if the attribute self.email exists
+        """
+        x = User()
+        self.assertTrue(hasattr(x, "email"))
+
     def test_constructor_with_kwargs(self):
         """
         tests the constructor with a dictionary of
