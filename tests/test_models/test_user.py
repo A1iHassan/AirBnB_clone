@@ -41,12 +41,15 @@ class Test_User(unittest.TestCase):
         """
         self.assertEqual(dt, type(User().updated_at))
 
-    def test_email_exist(self):
+    def test_attr_exist(self):
         """
         tests if the attribute self.email exists
         """
         x = User()
         self.assertTrue(hasattr(x, "email"))
+        self.assertTrue(hasattr(x, "password"))
+        self.assertTrue(hasattr(x, "first_name"))
+        self.assertTrue(hasattr(x, "last_name"))
 
     def test_constructor_with_kwargs(self):
         """
