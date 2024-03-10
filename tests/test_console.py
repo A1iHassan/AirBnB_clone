@@ -150,7 +150,6 @@ or detailed help with "help cmd".'
             self.assertIn(c_output, output)
 
 
-
 class TestConsoleCommands_create(unittest.TestCase):
     """
     class that tests the create command
@@ -840,7 +839,8 @@ class TestConsoleCommands_dot_update(unittest.TestCase):
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("create BaseModel")
             _id = f.getvalue().strip()
-            HBNBCommand().onecmd(f"BaseModel.update({_id}, " + "{'name': 'value'})")
+            HBNBCommand().onecmd(f"BaseModel.update({_id}, "
+                                 + "{'name': 'value'})")
             output = f.getvalue().strip()
             self.assertIn("", output)
             x = storage.all()

@@ -93,7 +93,7 @@ class HBNBCommand(cmd.Cmd):
                 text = arg2[arg2.index('(') + 1:arg2.index(')')]
                 if text == "":
                     print("** instance id missing **")
-                elif not "," in text:
+                elif "," not in text:
                     print("** attribute name missing **")
                 else:
                     _id, _ = text.split(", ", 1)
@@ -125,8 +125,9 @@ class HBNBCommand(cmd.Cmd):
                                 self.do_update(x)
                         except ValueError:
                             x = f"{arg1} " + ''.join([i for i in text
-                                                    if i != ','
-                                                    and i != '"' and i != "'"])
+                                                      if i != ','
+                                                      and i != '"'
+                                                      and i != "'"])
                             self.do_update(x)
 
     def do_create(self, arg):
