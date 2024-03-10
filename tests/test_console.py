@@ -19,10 +19,9 @@ from models.state import State
 from models.user import User
 
 
-class TestConsoleCommands(unittest.TestCase):
+class TestConsoleCommands_help(unittest.TestCase):
     """
-    a class that tests all the possible commands of the
-    console.py program
+    a class that tests the help command
     """
 
     def setUp(self):
@@ -150,6 +149,29 @@ or detailed help with "help cmd".'
             output = f.getvalue().strip()
             self.assertIn(c_output, output)
 
+
+
+class TestConsoleCommands_create(unittest.TestCase):
+    """
+    class that tests the create command
+    """
+
+    def setUp(self):
+        try:
+            rename("file.json", "temp")
+        except IOError:
+            pass
+
+    def tearDown(self):
+        try:
+            remove("file.json")
+        except IOError:
+            pass
+        try:
+            rename("temp", "file.json")
+        except IOError:
+            pass
+
     def test_create_instance(self):
         """
         tests the create command
@@ -179,6 +201,28 @@ or detailed help with "help cmd".'
             _dict = storage.all().keys()
             text = f"BaseModel.{output}"
             self.assertIn(text, _dict)
+
+
+class TestConsoleCommands_all(unittest.TestCase):
+    """
+    class that tests the all command
+    """
+
+    def setUp(self):
+        try:
+            rename("file.json", "temp")
+        except IOError:
+            pass
+
+    def tearDown(self):
+        try:
+            remove("file.json")
+        except IOError:
+            pass
+        try:
+            rename("temp", "file.json")
+        except IOError:
+            pass
 
     def test_all_instances(self):
         """
@@ -224,6 +268,28 @@ or detailed help with "help cmd".'
             HBNBCommand().onecmd("all MyClass")
             output = f.getvalue().strip()
             self.assertIn("** class doesn't exist **", output)
+
+
+class TestConsoleCommands_show(unittest.TestCase):
+    """
+    class that tests the show command
+    """
+
+    def setUp(self):
+        try:
+            rename("file.json", "temp")
+        except IOError:
+            pass
+
+    def tearDown(self):
+        try:
+            remove("file.json")
+        except IOError:
+            pass
+        try:
+            rename("temp", "file.json")
+        except IOError:
+            pass
 
     def test_show_instance(self):
         """
@@ -278,6 +344,28 @@ or detailed help with "help cmd".'
             output = f.getvalue().strip()
             self.assertIn("** no instance found **", output)
 
+
+class TestConsoleCommands(unittest.TestCase):
+    """
+    class that tests the destroy command
+    """
+
+    def setUp(self):
+        try:
+            rename("file.json", "temp")
+        except IOError:
+            pass
+
+    def tearDown(self):
+        try:
+            remove("file.json")
+        except IOError:
+            pass
+        try:
+            rename("temp", "file.json")
+        except IOError:
+            pass
+
     def test_destroy_instance(self):
         """
         tests the destroy command without arguments
@@ -327,6 +415,28 @@ or detailed help with "help cmd".'
             HBNBCommand().onecmd("destroy BaseModel wrong_id")
             output = f.getvalue().strip()
             self.assertIn("** no instance found **", output)
+
+
+class TestConsoleCommands(unittest.TestCase):
+    """
+    class that tests the update command
+    """
+
+    def setUp(self):
+        try:
+            rename("file.json", "temp")
+        except IOError:
+            pass
+
+    def tearDown(self):
+        try:
+            remove("file.json")
+        except IOError:
+            pass
+        try:
+            rename("temp", "file.json")
+        except IOError:
+            pass
 
     def test_update_instance(self):
         """
@@ -401,7 +511,29 @@ or detailed help with "help cmd".'
             output = f.getvalue().strip()
             self.assertIn("** no instance found **", output)
 
-    def test_all_instances_with_class_name(self):
+
+class TestConsoleCommands_dot_all(unittest.TestCase):
+    """
+    class that tests the .all() command
+    """
+
+    def setUp(self):
+        try:
+            rename("file.json", "temp")
+        except IOError:
+            pass
+
+    def tearDown(self):
+        try:
+            remove("file.json")
+        except IOError:
+            pass
+        try:
+            rename("temp", "file.json")
+        except IOError:
+            pass
+
+    def test_dot_all_instances_with_class_name(self):
         """
         tests the .all() command with an
         invalid class name
@@ -411,7 +543,7 @@ or detailed help with "help cmd".'
             output = f.getvalue().strip()
             self.assertIn("** class doesn't exist **", output)
 
-    def test_all_instances_with_existing_class(self):
+    def test_dot_all_instances_with_existing_class(self):
         """
         tests the .all() command with a valid
         class name
@@ -424,7 +556,29 @@ or detailed help with "help cmd".'
             output = f.getvalue().strip()
             self.assertEqual(str(x), output)
 
-    def test_show_instance_with_invalid_class_name(self):
+
+class TestConsoleCommands_dot_show(unittest.TestCase):
+    """
+    class that tests the .show() command
+    """
+
+    def setUp(self):
+        try:
+            rename("file.json", "temp")
+        except IOError:
+            pass
+
+    def tearDown(self):
+        try:
+            remove("file.json")
+        except IOError:
+            pass
+        try:
+            rename("temp", "file.json")
+        except IOError:
+            pass
+
+    def test_dot_show_instance_with_invalid_class_name(self):
         """
         tests the .show() command with an invalid
         class name
@@ -468,6 +622,28 @@ or detailed help with "help cmd".'
             output = f.getvalue().strip()
             self.assertIn("** no instance found **", output)
 
+
+class TestConsoleCommands_dot_destroy(unittest.TestCase):
+    """
+    class that tests the .destroy() command
+    """
+
+    def setUp(self):
+        try:
+            rename("file.json", "temp")
+        except IOError:
+            pass
+
+    def tearDown(self):
+        try:
+            remove("file.json")
+        except IOError:
+            pass
+        try:
+            rename("temp", "file.json")
+        except IOError:
+            pass
+
     def test_dot_destroy_instance_with_invalid_class_name(self):
         """
         tests the .destroy() command wit an invalid
@@ -508,6 +684,28 @@ or detailed help with "help cmd".'
             HBNBCommand().onecmd("BaseModel.destroy(wrong_id)")
             output = f.getvalue().strip()
             self.assertIn("** no instance found **", output)
+
+
+class TestConsoleCommands_dot_update(unittest.TestCase):
+    """
+    class that tests the .update() command
+    """
+
+    def setUp(self):
+        try:
+            rename("file.json", "temp")
+        except IOError:
+            pass
+
+    def tearDown(self):
+        try:
+            remove("file.json")
+        except IOError:
+            pass
+        try:
+            rename("temp", "file.json")
+        except IOError:
+            pass
 
     def test_dot_update_instance_with_invalid_class_name(self):
         """
@@ -582,7 +780,7 @@ or detailed help with "help cmd".'
             x = storage.all()
             x[f"BaseModel.{_id}"]["name"] = "value"
 
-    def test_update_instance_with_empty_dict(self):
+    def test_dot_update_instance_with_empty_dict(self):
         """
         tests the .update() command with an empty dictonary
         """
@@ -593,7 +791,7 @@ or detailed help with "help cmd".'
             output = f.getvalue().strip()
             self.assertIn("** value missing **", output)
 
-    def test_update_instance_with_invalid_dict(self):
+    def test_dot_update_instance_with_invalid_dict(self):
         """
         tests the .update() command with a dictonary
         missing a value
