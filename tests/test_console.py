@@ -202,6 +202,72 @@ class TestConsoleCommands_create(unittest.TestCase):
             text = f"BaseModel.{output}"
             self.assertIn(text, _dict)
 
+    def test_create_instance_with_Amenity_class(self):
+        """
+        tests the create command with only a class name
+        """
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().onecmd("create Amenity")
+            output = f.getvalue().strip()
+            _dict = storage.all().keys()
+            text = f"Amenity.{output}"
+            self.assertIn(text, _dict)
+
+    def test_create_instance_with_City_class(self):
+        """
+        tests the create command with only a class name
+        """
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().onecmd("create City")
+            output = f.getvalue().strip()
+            _dict = storage.all().keys()
+            text = f"City.{output}"
+            self.assertIn(text, _dict)
+
+    def test_create_instance_with_PLace_class(self):
+        """
+        tests the create command with only a class name
+        """
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().onecmd("create Place")
+            output = f.getvalue().strip()
+            _dict = storage.all().keys()
+            text = f"Place.{output}"
+            self.assertIn(text, _dict)
+
+    def test_create_instance_with_Review_class(self):
+        """
+        tests the create command with only a class name
+        """
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().onecmd("create Review")
+            output = f.getvalue().strip()
+            _dict = storage.all().keys()
+            text = f"Review.{output}"
+            self.assertIn(text, _dict)
+
+    def test_create_instance_with_State_class(self):
+        """
+        tests the create command with only a class name
+        """
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().onecmd("create State")
+            output = f.getvalue().strip()
+            _dict = storage.all().keys()
+            text = f"State.{output}"
+            self.assertIn(text, _dict)
+
+    def test_create_instance_with_User_class(self):
+        """
+        tests the create command with only a class name
+        """
+        with patch('sys.stdout', new=StringIO()) as f:
+            HBNBCommand().onecmd("create User")
+            output = f.getvalue().strip()
+            _dict = storage.all().keys()
+            text = f"User.{output}"
+            self.assertIn(text, _dict)
+
 
 class TestConsoleCommands_all(unittest.TestCase):
     """
